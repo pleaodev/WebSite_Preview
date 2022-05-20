@@ -1,35 +1,38 @@
 /* Base | START ******************************************** */
 :root {
-  --background-color1: #131313;
-  --background-color2: #000;
-  --background-color3: #1d1d1d;
-  --background-image: url("../../assets/img/Background/bg-night.jpg");
-  --aside-transition: 1s;
+  --body: #131313;
+  --color2: #000;
+  --color3: #1d1d1d;
+  --color4: #151515;
   --text-color: #121416d8;
   --link-color: #543fd7;
+  --box-shadow: 0 1px 20px rgba(0,0,0,0.26);
+  --transition_03s: 0.3s;
+  --transition_05s: 0.5s;
+  --transition_1s: 1s;
 }
 
 body {
-  background: var(--background-color1);
+  background: var(--body);
   color: var(--text-color);
-  transition: 1s;
+  transition: var(--transition_05s);
 }
 
 /* Base | END ********************************************* */
 /* Dark - Light Mode | START ****************************** */
 html[data-theme=light] {
-  --background-color1: #f4f5f7;
-  --background-color2: #fbfbfb;
-  --background-color3: #fbfbfb;
+  --body: #e4e4e4;
+  --color1: #fbfbfb;
+  --color2: #fbfbfb;
+  --color3: #f0f0f0;
   --box-shadow: 0 1px 2px rgb(166 175 195 / 25%);
   --text-color: #121416d8;
   --link-color: #3f46f1;
 }
 
 html[data-theme=dark] {
-  --background-color1: #131313;
-  --background-color2: #000000;
-  --background-image: url("../../assets/img/Background/bg-night.jpg");
+  --body: #131313;
+  --color1: #000000;
   --box-shadow: 0 1px 20px rgba(0,0,0,0.26);
   --text-color: #F7F8F8;
   --link-color: #3f46f1;
@@ -53,10 +56,10 @@ html[data-theme=dark] {
 }
 
 aside {
-  background: var(--background-color2);
+  background: var(--color2);
   -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
-  transition: var(--aside-transition);
+  transition: var(--transition_05s);
 }
 
 .menu > li {
@@ -202,7 +205,7 @@ input#switch:checked + label.light-dark-mode .moon {
 
 /* Fake Browser  *********************************************** */
 .browser-content {
-  background-color: var(--background-color3);
+  background-color: var(--color3);
   -webkit-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
   border-radius: 20px;
@@ -213,7 +216,7 @@ input#switch:checked + label.light-dark-mode .moon {
   display: flex;
   justify-content: space-between;
   height: 50px;
-  background-color: var(--background-color3);
+  background-color: var(--color2);
   border-bottom: 1px solid #151515;
   border-radius: 20px 20px 0 0;
 }
@@ -228,7 +231,7 @@ input#switch:checked + label.light-dark-mode .moon {
 
 .browser-input {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   width: 400px;
 }
