@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="1080" viewBox="0 0 822 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0e033e;
+        stroke: #000;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Retângulo_1_copiar" data-name="Retângulo 1 copiar" class="cls-1" d="M2287.05,944.914L1634.94,1511.64c-87.45,76-229.24,76-316.69,0L339.241,660.813c-87.451-76-87.451-199.223,0-275.223L991.348-181.134c87.452-76,229.242-76,316.692,0l979.01,850.825C2374.5,745.692,2374.5,868.913,2287.05,944.914Z"/>
+</svg>

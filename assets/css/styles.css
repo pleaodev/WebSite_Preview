@@ -1,0 +1,91 @@
+:root {
+  --bs-blue: #180669;
+  --background-color1: #f2f2f2;
+  --background-color2: #e8e8e8;
+  --background-color3: #878787;
+  --fill-color1: #180669;
+  --text-color: #565e66d8;
+  --link-color: #543fd7;
+  --color-purple: mediumpurple;
+  --color-gray: #ababab;
+  --color-gray-dark: #5c5c5c;
+  --color-red: #d64b4b;
+  --color-orange: orange;
+  --color-blue: #0094ff;
+  --color-green: #67a367;
+}
+
+html[data-theme='light'] {
+  --background-color1: linear-gradient(90deg, rgba(242,242,242,1) 33%, rgba(208,208,208,1) 100%);
+  --background-color2: #fbfbfb;
+  --background-color3: #fbfbfb;
+  --box-shadow: 0 1px 2px rgb(166 175 195 / 25%);
+  --text-color: #121416d8;
+  --link-color: #3f46f1;
+}
+
+html[data-theme='dark'] {
+  --background-color1: #000000;
+  --background-color2: #0d0d0d;
+  --fill-color1: gray;
+  --background-image: url("Background/bg-night.jpg");
+  --box-shadow: 0 1px 20px rgba(0,0,0,0.26);
+  --text-color: #F7F8F8;
+  --link-color: #3f46f1;
+}
+
+header {
+  background: var(--background-color1);
+  position: relative;
+  height: 70vh;
+}
+
+h3 {
+  font-family: 'Source Code Pro';
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Source Code Pro';
+  letter-spacing: -5px;
+  font-size: 80px;
+}
+
+/* Base | START ******************************************** */
+
+body {
+  background: var(--background-color1);
+  color: var(--text-color) !important;
+  transition: 1s;
+  overflow-x: hidden !important;
+}
+
+/* Base | END ********************************************* */
+
+/* Dark - Light Mode | START ****************************** */
+
+/* Dark - Light Mode | END ********************************** */
+
+.bar-anime {
+  font-size: 20px;
+  margin-bottom: -16px;
+  animation: 1s blink infinite;
+  opacity: 1;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.figure-img {
+  margin-bottom: 0 !important;
+  line-height: 0;
+}
+
+p {
+  color: var(--text-color) !important;
+}
+
