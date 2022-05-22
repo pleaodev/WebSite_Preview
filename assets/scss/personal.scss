@@ -10,7 +10,7 @@
 	--text-color: #121416d8;
   --link-color: #543fd7;
 	//Shadows
-	--box-shadow: 0 1px 20px rgba(0,0,0,0.26);
+	--box-shadow: 0 1px 5px rgba(0,0,0,0.16);
 	//Transitions
   --transition_03s: 0.3s;
 	--transition_05s: 0.5s;
@@ -40,7 +40,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
   --body: #131313;
   --color1: #000000;
-  --box-shadow: 0 1px 20px rgba(0,0,0,0.26);
+  --box-shadow: 0 1px 10px rgba(0,0,0,0.16);
   --text-color: #F7F8F8;
   --link-color: #3f46f1;
 }
@@ -356,7 +356,8 @@ input#website:focus ~ .highlight {
 }
 
 .button-default {
-  font-size: 14px;
-  background-color: #567bff;
+  font-size: 12px;
+	letter-spacing: 1px;
+  background-color: #083ef7;
   border-radius: 20px;
 }
