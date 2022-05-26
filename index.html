@@ -7,13 +7,28 @@
     <title>Website View</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Montserrat.css">
+    <link rel="stylesheet" href="assets/css/Source%20Code%20Pro.css">
     <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+    <link rel="stylesheet" href="assets/css/Construction-Alert.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/inputs.css">
     <link rel="stylesheet" href="assets/css/personal.compiled.css">
     <link rel="stylesheet" href="assets/css/waves.css">
 </head>
 
 <body>
+    <div>
+        <div class="position-fixed barra-construcao p-3">
+            <p class="text-center m-0 text-white">This tool is <span class="text-danger me-1">under development</span><span class="text-primary">Beta 1</span>, sorry if there are any bugs <img src="assets/img/logos/programming/bug.svg" style="width: 20px;filter: brightness(97%) contrast(106%);">!</p>
+        </div>
+        <div class="d-flex d-xxl-none position-absolute align-items-center justify-content-center" style="top: 0;right: 0;bottom: 0;left: 0;background-color: #15094d;z-index: 9999;">
+            <div>
+                <div class="d-flex justify-content-center align-items-center"><img class="rounded-circle img-fluid" src="assets/img/Pedro-Leão-Perfil.png" width="100px"></div>
+                <h3 class="text-center text-warning mt-4" style="font-size: 26px;">WebSite under construction!</h3>
+                <h1 class="text-center text-white p-5 pt-2" style="font-size: 14.4px;">You can see it on a bigger screen, notebook, desktop or come back in a few days!</h1>
+            </div>
+        </div>
+    </div>
     <div class="row g-0">
         <div class="col-auto position-relative">
             <aside data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="component-aside position-relative dark-mode-aside">
@@ -67,7 +82,7 @@
                                     <path d="M19 11h2m-1 -1v2"></path>
                                 </svg><span class="ball"></span></label></div>
                         <div class="browser-input">
-                            <div class="group"><input type="text" class="text-primary" placeholder="Website Here" v-on:input="changeUrl"><span class="bar"></span></div>
+                            <div class="group"><input type="text" class="text-primary effect-1" placeholder="Website Here" v-on:input="changeUrl"><span class="focus-border"></span></div>
                         </div>
                     </div>
                     <div class="browser-content">

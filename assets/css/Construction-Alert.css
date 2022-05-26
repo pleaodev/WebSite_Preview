@@ -1,0 +1,18 @@
+h3 {
+  font-family: 'Source Code Pro';
+  letter-spacing: -1px;
+  font-size: 50px;
+}
+
+p {
+  color: var(--text-color) !important;
+}
+
+.barra-construcao {
+  background-color: #000000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+}
+
