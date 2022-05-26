@@ -170,7 +170,30 @@
 }
 
 .browser-fake-site {
+  position: relative;
   border-radius: 20px !important;
   height: 71.5vh;
+}
+
+.button-default svg {
+  font-size: 50px;
+}
+
+.button-default i {
+  font-size: 20px;
+}
+
+.button-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.9;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: #083ef7;
+  padding: 0px;
+  border-radius: 20px;
 }
 

@@ -21,6 +21,7 @@ body {
   background: var(--body);
   color: var(--text-color);
   transition: var(--transition_05s);
+	overflow-y: hidden !important;
 }
 
 /* Base | END ********************************************* */
@@ -349,10 +350,11 @@ input#website:focus ~ .highlight {
 
 .browser-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+	padding-right: 15px;
   font-size: 20px;
-  width: 150px;
+  min-width: 150px;
 }
 
 .button-default {

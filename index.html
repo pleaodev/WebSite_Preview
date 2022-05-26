@@ -53,7 +53,7 @@
             </aside>
         </div>
         <div class="col">
-            <main class="component-main">
+            <main id="webSitePreviewApp" class="component-main">
                 <div class="container">
                     <div class="menu-top">
                         <div class="switch-container"><input type="checkbox" id="switch"><label class="form-label light-dark-mode waves-effect waves-light" for="switch"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-sun sun text-warning" style="height: auto;">
@@ -67,15 +67,25 @@
                                     <path d="M19 11h2m-1 -1v2"></path>
                                 </svg><span class="ball"></span></label></div>
                         <div class="browser-input">
-                            <div class="group"><input type="text" id="website" class="text-primary" placeholder="Website Here"><span class="bar"></span></div>
+                            <div class="group"><input type="text" class="text-primary" placeholder="Website Here" v-on:input="changeUrl"><span class="bar"></span></div>
                         </div>
                     </div>
                     <div class="browser-content">
                         <div class="browser-bar">
                             <div class="browser-circles"><i class="typcn typcn-media-record text-danger" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true"></i><i class="typcn typcn-media-record text-warning" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true"></i><i class="typcn typcn-media-record text-success" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"></i></div>
-                            <div class="browser-buttons"><a class="btn button-default" role="button">Send Client</a></div>
+                            <div class="browser-buttons"><button class="btn button-circle me-2 waves-effect waves-light" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Print" onclick="window.print()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4H16V6H8V4ZM18 6H22V18H18V22H6V18H2V6H6V2H18V6ZM20 16H18V14H6V16H4V8H20V16ZM8 16H16V20H8V16ZM8 10H6V12H8V10Z" fill="currentColor"></path>
+                                    </svg></button><button class="btn button-circle me-2 waves-effect waves-light" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Print"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                        <path d="M14.8284 12L16.2426 13.4142L19.071 10.5858C20.6331 9.02365 20.6331 6.49099 19.071 4.9289C17.509 3.3668 14.9763 3.3668 13.4142 4.9289L10.5858 7.75732L12 9.17154L14.8284 6.34311C15.6095 5.56206 16.8758 5.56206 17.6568 6.34311C18.4379 7.12416 18.4379 8.39049 17.6568 9.17154L14.8284 12Z" fill="currentColor"></path>
+                                        <path d="M12 14.8285L13.4142 16.2427L10.5858 19.0711C9.02372 20.6332 6.49106 20.6332 4.92896 19.0711C3.36686 17.509 3.36686 14.9764 4.92896 13.4143L7.75739 10.5858L9.1716 12L6.34317 14.8285C5.56212 15.6095 5.56212 16.8758 6.34317 17.6569C7.12422 18.4379 8.39055 18.4379 9.1716 17.6569L12 14.8285Z" fill="currentColor"></path>
+                                        <path d="M14.8285 10.5857C15.219 10.1952 15.219 9.56199 14.8285 9.17147C14.4379 8.78094 13.8048 8.78094 13.4142 9.17147L9.1716 13.4141C8.78107 13.8046 8.78107 14.4378 9.1716 14.8283C9.56212 15.2188 10.1953 15.2188 10.5858 14.8283L14.8285 10.5857Z" fill="currentColor"></path>
+                                    </svg></button><button class="btn button-circle waves-effect waves-light" data-bs-toggle="tooltip" data-bss-tooltip="" type="button" title="Send to client"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"></path>
+                                    </svg></button></div>
                         </div>
+                        <p class="text-warning d-none">{{ urlPreview }}</p>
                         <div class="browser-fake-site">
+                            <div class="d-none_"><iframe width="100%" height="100vh" class="position-absolute" style="background: transparent !important;height: 75.4vh; z-index: 1;" :src="urlPreview"></iframe></div>
                             <div class="d-flex align-items-center p-3 pb-0">
                                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" class="browser-fake-logo"></div>
                             </div>
@@ -97,8 +107,10 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/dark-mode.js"></script>
     <script src="assets/js/waves.js"></script>
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="assets/js/vue_here.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
 </body>
 
 </html>
